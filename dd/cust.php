@@ -1,0 +1,142 @@
+		
+<?php
+	include("config.php");
+	session_start();
+	$user=$_SESSION['user'];
+	$mob=$_SESSION['mob'];
+	$query=("select * from customer where cust_mob='$mob'");
+	$result=pg_query($conn,$query);
+	while($row=pg_fetch_array($result))
+	{
+		$name=$row['cust_name'];
+		$address=$row['cust_add'];
+		$bike=$row['bike'];
+		$b=$row['bill_status'];
+	}
+	$query1=("select plate_no,company from vehicle where  cust_mob='$mob'");
+	$result1=pg_query($conn,$query1);
+	while($row=pg_fetch_array($result1))
+	{
+		$plate=$row['plate_no'];
+			$company=$row['company'];
+	}
+	$query2=("select * from service where cust_mob='$mob'");
+	$result2=pg_query($conn,$query2);
+	while($row=pg_fetch_array($result2))
+	{
+		$date=$row['DOS'];
+		$km=$row['kms'];
+		$ser=$row['serv_parts'];
+	}
+		
+	$query3=("select * from receipt where cust_mob='$mob'");
+	$result3=pg_query($conn,$query3);
+	while($row=pg_fetch_array($result3))
+	{
+		$no=$row['receipt_no'];
+		$bill=$row['total_bill'];
+	}
+
+?>
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Customer</title>
+<link rel="stylesheet" href="cust1.css">
+</head>
+<body>
+ <div class="title1"><label><h1>REAL AUTO</h1></label><hr>
+     <div class="title1a"><label>Real auto</label></div>
+  </div>
+
+	<a class="signout" href="index.php">Sign Out</a>	
+	
+
+
+
+
+  <div class='info'>
+	<p>		<b class='b1'><?php echo $name;?></b>
+			<strong class='b2'><?php echo $plate;?></strong><br><br>
+			<b class='b3'><?php echo $company;?></b><b class='b4'><?php echo $bike;?></b><br>
+			
+	</p>
+
+  </div>
+  <div class="title2"><label>Service Job Status</label><hr>
+     <div id="progressbar" style="width:0%;"><?php include("progresbar.php");?>		
+     </div>
+  </div>
+  <!--button class="but" onClick="move()">Click me</button--></div>
+  <div class="title3"><label>Next Service At</label><hr>
+	<?php echo " KM--".$km;?>
+  </div>
+  <div class="title4"><label>Service Task List</label><hr><br>
+	<?php
+		echo "$ser";
+	?>
+  </div>
+  <div class="title5"><label>Spared List</label><hr>
+  </div>
+  <div class="title5"><label>Bill</label><hr>
+	<p>
+	<?php 
+	
+	 if($b==1)
+	{
+		echo "Receipt No: $no<br><br> ";             
+		echo "Total Bill:$bill";
+
+	}
+	else if($b==0)
+		echo" Servicing is in progress";
+	?>
+		
+	</p>
+   </div>
+  <!--script>
+	function move()
+	{
+		var elem=document.getElementById("progressbar");
+		var width=20;
+		var id=setInterval(frame,10);
+		function frame()
+		{
+			if(width >=100)
+			{
+				clearInterval(id);
+			}
+			else
+			{
+				width++;
+				elem.style.width=width + '%';
+				elem.innerHTML=width * 1 + '%';
+			}
+		}
+	}
+</script-->
+  <div class="title6">
+	<label><h1><strong>Connect to GarageBot</strong></h1></label>
+
+	<label>Contact no.</label><br>
+		<label>987654321</label><br>
+		<label>998427473</label>
+        <div class="copyright">
+		<p style="font-size:10px;">Copyright @ Atar tecnologies  Pvt. Ltd. 2019.All rightd are reserved.</p>
+	</div>
+  </div>
+	<div class="bt">
+		<a href="index.php">BACK</a>
+	</div>
+
+</body>
+</html>
+
+

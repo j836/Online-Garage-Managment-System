@@ -1,0 +1,133 @@
+body
+{
+ 
+  background-color:white;
+ /* background-position:center;*/
+ color:black;
+
+}
+
+.title1
+{
+  margin:-7px;
+  text-decoration:none;
+  padding:20 10 30 20;
+  text-align:left;
+  font-family:Arial,Helvetica,sans-serif;
+ 
+/* background:-webkit-linear-gradient(120deg,firebrick,#8e44ad);*/
+  background:black;
+  color:#b1ff32;
+   border:2px solid #b1ff32;
+ /* box-shadow:2px 2px 2px 2px #2196f3;*/
+ } 
+.title1a
+{
+  border:black;
+
+  padding:0 0 0 20;
+}
+.title2
+{
+  border-radius:10px;
+  padding:50;
+}
+.title3
+{
+  padding:50;
+}
+.title4
+{
+  padding:50;
+}
+
+.title5
+{
+  padding:50;
+}
+
+
+ul
+{
+  text-align:center;
+}
+
+ul li
+{
+  display:inline-block;
+  width:100px;
+  
+}
+
+.title6
+{
+  color:#b1ff32;
+  border-radius:8px;
+  background-color:black;
+  padding:50;
+  padding-top:20;
+  padding-left:10;
+  text-align:left;
+  margin:3;
+}
+body
+{
+	
+}
+
+
+.b1
+{
+	position:absolute;
+	left:90px;
+	color:black;
+	font-family:sans-serif,helvetica; color:firebrick;
+}
+.b2
+{
+	position:absolute;
+	left:460px;
+	font-family:sans-serif,helvetica; color:firebrick;
+}
+.b3
+{
+	position:absolute;
+	left:90px;
+	font-family:sans-serif,helvetica; color:firebrick;
+}
+.b4
+{
+	position:relative;
+	left:420px;
+	font-family:sans-serif,helvetica; color:firebrick;
+}
+.info
+{	
+	border-radius:10px;
+	margin:40px;
+	border:1px solid grey;
+	box-shadow:2px 2px grey;
+
+	
+
+}
+hr
+{
+	color:#b1ff32;
+	
+}
+
+.signout
+{
+	border:1px solid black;
+	background-color:lightcoral;
+	color:white;
+	float:right;
+	margin-top:15px;
+	padding:10px 10px 10px 10px;
+}
+.signout:hover
+{
+	background-color:white;
+	color:firebrick;
+}

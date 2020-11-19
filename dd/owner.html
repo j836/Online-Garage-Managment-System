@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Admin</title>
+<!--link rel=stylesheet" href="cust.css"-->
+<link rel="stylesheet" href="owner.css">
+</head>
+<body>
+ 
+<body onload="myFunction()">
+<div class="title1"><label><h1 >REAL AUTO</h1></label><hr style="color:grey;">
+     <div class="title1a"><label>Real auto</label></div>
+  </div>
+  <div class="search-box">
+    <input type=text class="search-txt" name="" placeholder="Enter Plate no.">
+    <input type=submit class="search-btn" value="search">
+  </div>
+  <div id="loading">
+    <span></span>
+  </div>
+ <script>
+    var preloader=document.getElementById('loading');
+    function myFunction()
+    {
+	preloader.style.display = 'none';
+    }
+</script>
+  <form name=f1 class="q1" method=post>
+	<input type=button name=b1 value="View all customers"/><br><br>
+	<input type="button" name=b2 value="View on going customers"/><br><br>
+	<input type="submit" name="bill" value="bill"/>
+ 
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.bg
+{
+
+	background-repeat:no-repeat;
+}
+
+.i
+{
+	background:url("df.jpeg");
+}
+
+hr
+{
+	
+	color:#b1ff32 ;
+	width:80%;
+}
+
+h3
+{
+	color:black;
+	font-family:arial,sans-serif;
+}
+
+bt
+{
+	background-color:firebrick;	
+	text-align:left;
+	text-decoration:none;
+	margin-top:10px;
+	font-size:15px;
+	color:white;
+	
+}
+
+
+bt:hover
+{
+	background-color:white;
+	color:firebrick;
+	
+}

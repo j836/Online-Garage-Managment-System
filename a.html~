@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Real Auto</title>
+<body>
+
+<center><h1>Real Auto</h1></center>
+ <div >
+  <span style="text-align:left;">
+  <h3>Services</h3>
+    <h6>  <a >BOOK A SERVICE</a>
+	  <a>BEST CAR MECHANIC PUNE</a>
+	  <a >CAR BODY WORK</a>
+  	  <a>BEST CAR PAINTING IN PUNE</a>
+  </div>
+  <div>
+	<span>
+	  <h3>SOCIAL</h3>
+		<ul>
+			<li>
+				<a href=" " target="_blank">Facebook</a>
+				<a href=" " target="_blank">Instagram</a>
+			</li>
+		<ul>
+	</span>
+  </div>
+
+			
+</body>
+</head>
+</html>
+
+

@@ -1,0 +1,199 @@
+
+<html>
+<head>
+<style>
+.step_progressbar
+{
+    display:block;
+    width:400px;
+    margin:100px auto;
+    background-color:#fff;
+}
+body
+{
+     margin:0;
+     padding:0;
+     background:#eee;
+}
+ul
+{
+     display:flex;
+     list-style:none;
+     align-items:center;
+     justify-content:space-between;
+     counter-reset:step;
+     margin:0;
+     padding:0;
+}
+li
+{
+    content:none;
+    display:inline-block;
+    position:relative;
+    width:33%;
+    text-align:center;
+    margin:15px 0;
+}
+li:before
+{
+   display:block;
+   width:50px;
+   height:50px;
+   border-radius:50%;
+   background-color:#bdbdbd;
+   line-height:50px;
+   text-align:center;
+   content:counter(step);
+   counter-increment:step;
+   margin:10px auto;
+   position:relative;
+   z-index:2;
+   font-size:20px;
+}
+
+li.active
+{
+   color:green; 
+    font-weight:bold;
+}
+li:after
+{
+    content:"";
+    height:3px;
+    width:100%;
+    background-color:#bdbdbd;
+    position:absolute;
+    top:35px;
+    left:-50%;
+    z-index:1;
+}
+li:first-child:after
+{
+    content:none;
+}
+
+li.active + li:after
+{
+    background-color:green;
+}
+
+li.active:before
+{
+  background-color:green;
+  color:#fff;
+}
+
+li.act
+{
+   color:green;
+   font-weight:bold;
+}
+
+li.act + li:after
+{
+   background-color:green;
+}
+
+li.act:before
+{
+   background-color:green;
+   color:#fff;
+}
+
+
+li.act3
+{
+   color:green;
+   font-weight:bold;
+}
+
+li.act3 + li:after
+{
+   background-color:green;
+}
+
+li.act3:before
+{
+   background-color:green;
+   color:#fff;
+}
+
+
+</style>
+</head>
+<body>
+<div class="step_progressbar">
+<ul>
+    <?php
+	
+		include("config.php");
+		$mob='1234567890';
+		$query=("select status from customer where cust_mob='$mob';");
+		$result=pg_query($conn,$query);
+		while($row=pg_fetch_array($result))
+		{
+			$status=$row['status'];
+		}
+			
+		if($status==1)
+		{		
+ ?>
+	
+		<li class='active'>Arrived</li>
+		<li>Servicing</li>
+		<li>Completed</li>
+		
+	<?php
+		}?>
+
+
+<ul>
+    <?php
+	 if($status==2)
+	{
+      ?>
+		<li class="active">Arrived</li>
+		<li class="active">Servicing</li>
+		<li >Completed</li>	
+	
+
+<?php
+ }
+?>
+
+<ul>
+  <?php
+ 
+    
+	 if($status==3)
+	{
+      ?>
+		<li class="active">Arrived</li>
+		<li class="active">Servicing</li>
+		<li class="active">Completed</li>	
+	
+</ul>
+<?php
+}
+?>
+<ul>
+  <?php
+ 
+    
+	 if($status==0)
+	{
+      ?>
+		<li >Arrived</li>
+		<li >Servicing</li>
+		<li >Completed</li>	
+	<?php
+	}
+	?>
+	
+</ul>	
+  
+</div>
+</body>
+</html>
+         
+

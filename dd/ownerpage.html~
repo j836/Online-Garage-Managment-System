@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Owner's page</title>
+</head>
+<body>
+  <form name=f2 method=post>
+	<input type=button name=b1 value="View total customers"></input><br><br>
+	<input type=button name=b2 value="View ongoing customer"></input><br><br>
+	<input type=button name=b3 value="Search by Customer"></input><br><br>
+	<input type=button name=b4 value="Search by number plate"></input><br<br>
+	<input type=button name=b5 value="Reply to Grievances"></input><br><br>
+	<input type=button name=b6 value="Generate Bill"></input><br><br>
+  </form>
+</body>
+</html>
+	

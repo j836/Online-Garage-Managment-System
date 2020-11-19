@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Real Auto</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class="nav">
+<!--img src="logo.png" height="85px" class="logo"></a -->
+<h1 class="head">Garage Bot &reg;</h1>
+<ul class="menu">
+	<li><a href="home.php">Home</a></li>
+	<li><a href="about.php">About Us</a></li>
+	<li><a href="contact.php">Contact Us</a></li>
+	<li><?php include 'login.php'; ?>
+</ul>
+</body>
+</html>

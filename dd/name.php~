@@ -1,0 +1,8 @@
+<html>
+ <body>
+   <form action="progressbar.php" method=post>
+	Enter steps:<input type="number" name="num">
+	<input type="submit" name=sub value="SUBMIT">
+   </form>
+</body>
+</html>

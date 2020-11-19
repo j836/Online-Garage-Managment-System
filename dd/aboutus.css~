@@ -1,0 +1,23 @@
+.bg
+{
+
+	background-repeat:no-repeat;
+}
+
+.i
+{
+	background:url("df.jpeg");
+}
+
+hr
+{
+	
+	color:#b1ff32 ;
+	width:80%;
+}
+
+h3
+{
+	color:black;
+	font-family:arial,sans-serif;
+}
